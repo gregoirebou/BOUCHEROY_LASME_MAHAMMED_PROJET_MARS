@@ -27,6 +27,8 @@ typedef enum e_move
     U_TURN
 } t_move;
 
+t_localisation translate(t_localisation, t_move);
+
 /**
  * @brief function to get a t_move as a string
  * @param move : the move to convert
