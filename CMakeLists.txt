@@ -9,4 +9,5 @@ add_executable(BOUCHEROY_LASME_MAHAMMED_PROJET_MARS
         map.c
         moves.c
         queue.c
-        stack.c)
+        stack.c
+        node.c)
