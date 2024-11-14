@@ -1,6 +1,7 @@
 //
 // Created by grego on 24/10/2024.
 //
+#include <stdio.h>
 #include <stdlib.h>
 #include "tree.h"
 #include "loc.h"
@@ -17,4 +18,10 @@ t_tree createEmptyNTree()
 void Fill_Tree(t_tree *tree, int height, int nb_choices, int** costs, t_localisation loc_init, t_move* deplacements)
 {
     fill_node(tree->root, height, nb_choices, costs, loc_init, deplacements);
+}
+
+
+void displayTree(t_tree tree)
+{
+    display_node(*tree.root);
 }

@@ -2,6 +2,8 @@
 // Created by grego on 24/10/2024.
 //
 #include <stdlib.h>
+#include <stdio.h>
+#include <assert.h>
 #include "node.h"
 #include "loc.h"
 #include "moves.h"
@@ -58,8 +60,15 @@ void fill_node(t_node* node, int depth, int nb_choices, int** costs, t_localisat
             fill_node(son, son->depth, nb_choices - 1, costs, new_loc, new_deplacements);
 
             node->sons[i] = son;
+            node->nbSons++;
         }
 
         free(new_deplacements);
     }
+}
+
+void display_node(t_node node)
+{
+
+
 }

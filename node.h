@@ -20,4 +20,6 @@ void fill_node(t_node* node, int depth, int nb_choices, int** costs, t_localisat
 
 t_node *createNode(int val, int nb_sons, int depth);
 
+void display_node(t_node node);
+
 #endif //BOUCHEROY_LASME_MAHAMMED_PROJET_MARS_NODE_H
