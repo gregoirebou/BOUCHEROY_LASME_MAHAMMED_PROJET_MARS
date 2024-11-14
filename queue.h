@@ -27,6 +27,8 @@ t_queue_tab createEmptyQueue();
 void enqueue_tab(t_queue_tab*, t_node*);
 int dequeue_tab(t_queue_tab);
 
+int isQueueEmpty(t_queue_tab);
+
 /**
  * @brief Function to create a queue
  * @param size : the size of the queue
