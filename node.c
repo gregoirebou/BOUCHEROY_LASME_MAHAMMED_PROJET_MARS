@@ -71,4 +71,5 @@ void display_node(t_node node)
 {
 
 
+
 }

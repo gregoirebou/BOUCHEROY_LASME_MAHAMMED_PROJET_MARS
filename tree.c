@@ -1,10 +1,12 @@
 //
 // Created by grego on 24/10/2024.
 //
+#include <stdio.h>
 #include <stdlib.h>
 #include "tree.h"
 #include "loc.h"
 #include "moves.h"
+#include "queue.h"
 
 t_tree createEmptyNTree()
 {
@@ -14,24 +16,25 @@ t_tree createEmptyNTree()
 
 }
 
-void Fill_Tree(t_tree *tree, int height, int nb_choices, int** costs, t_localisation loc_init, t_move* deplacements)
+void Fill_Tree(t_tree tree, int height, int nb_choices, int** costs, t_localisation loc_init, t_move* deplacements)
 {
-    fill_node(tree->root, height, nb_choices, costs, loc_init, deplacements);
+    tree.root = createNode(costs[loc_init.pos.x][loc_init.pos.y], nb_choices, 0);
+    //fill_node(tree.root, height, nb_choices, costs, loc_init, deplacements);
 }
 
 void display_tree(t_tree tree){
-    t_queue tab_file;
+    t_queue_tab file;
     file = createEmptyQueue();
-    enqueue(&file, tree.root);
+    enqueue_tab(&file, tree.root);
     printf("[");
-    while( isQueueEmpty(file) == 0 ){
-        if ( file.values[file.first].nb_sons != 0){
-            for (int i = 0; i < file.values[file.first].nb_sons; i++){
-                enqueue(&file, file.values[file.first].son[i]);
+    while(isQueueEmpty(file) == 0 ){
+        if ( file.values[file.first]->nbSons != 0){
+            for (int i = 0; i < file.values[file.first]->nbSons; i++){
+                enqueue_tab(&file, file.values[file.first]->sons[i]);
             }
         }
-        printf(" %d :",dequeue(&file) );
-    }        
+        printf(" %d :",dequeue_tab(&file));
+    }
     printf("]");
 }
 

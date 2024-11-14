@@ -64,3 +64,4 @@ int dequeue_tab(t_queue_tab* pq){
     res = pq->values[pos]->value;
     pq->first = pq->first+1;
 }
+

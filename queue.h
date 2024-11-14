@@ -5,6 +5,7 @@
 #ifndef UNTITLED1_QUEUE_H
 #define UNTITLED1_QUEUE_H
 #include "loc.h"
+#include "node.h"
 /**
  * @brief Structure for the queue of integers
  */
@@ -25,9 +26,11 @@ typedef struct s_queue_tab
 t_queue_tab createEmptyQueue();
 
 void enqueue_tab(t_queue_tab*, t_node*);
-int dequeue_tab(t_queue_tab);
+int dequeue_tab(t_queue_tab*);
 
 int isQueueEmpty(t_queue_tab);
+
+
 
 /**
  * @brief Function to create a queue
