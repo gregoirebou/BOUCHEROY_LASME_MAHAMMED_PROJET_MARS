@@ -45,3 +45,7 @@ t_queue_tab createEmptyQueue(){
     q.first  = q.last = 0;
     return q;
 }
+
+int isQueueEmpty(t_queue_tab q){
+    return(q.last-q.first == 100); //100=MAX à modifier
+}
