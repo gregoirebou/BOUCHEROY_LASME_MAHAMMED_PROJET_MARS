@@ -49,3 +49,11 @@ t_queue_tab createEmptyQueue(){
 int isQueueEmpty(t_queue_tab q){
     return(q.last-q.first == 100); //100=MAX à modifier
 }
+
+void enqueue_tab(t_queue_tab* pq, t_node* noeud){
+    int pos;
+    pos = pq->last % 100;
+    pq->values[pos] = noeud;
+    pq->last = pq->last+1;
+
+}
