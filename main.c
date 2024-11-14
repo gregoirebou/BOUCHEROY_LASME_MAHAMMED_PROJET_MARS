@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include "map.h"
+#include "tree.h"
 
 int main() {
     t_map map = createMapFromFile("..\\maps\\littlemap.map");
@@ -22,5 +23,14 @@ int main() {
         printf("\n");
     }
     displayMap(map);
+    t_tree treefor33;
+    treefor33 = createEmptyNTree();
+    t_move depl[10] = {F_10, F_20, F_10, T_RIGHT, T_RIGHT};
+    t_localisation init;
+    init.pos.x = map.x_max - 2;
+    init.pos.y = map.y_max - 1;
+    init.ori = NORTH;
+    Fill_Tree(&treefor33, 3, 3, map.costs, init, depl);
+    
     return 0;
 }

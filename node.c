@@ -5,6 +5,8 @@
 #include "node.h"
 #include "loc.h"
 #include "moves.h"
+#define DEFAULT_COST 65535
+#define DEFAULT_NB_SONS 30
 
 t_node *createNode(int val, int nb_sons, int depth)
 {
@@ -22,7 +24,7 @@ t_node *createNode(int val, int nb_sons, int depth)
     return new_node;
 }
 
-t_move* remove(t_move* deplacements, t_move dep, int TL)
+t_move* remove2(t_move* deplacements, t_move dep, int TL)
 {
     t_move* new = (t_move*)malloc(sizeof(t_move)*(TL - 1));
     int nb = 0;
@@ -36,26 +38,28 @@ t_move* remove(t_move* deplacements, t_move dep, int TL)
     return new;
 }
 
+
 void fill_node(t_node* node, int depth, int nb_choices, int** costs, t_localisation loc, t_move* deplacements)
 {
-    t_node* son;
-    t_move* new_deplacements = NULL;
     node->depth = depth;
     node->nbSons = nb_choices;
     node->value = costs[loc.pos.x][loc.pos.y];
 
-    //createNode(costs[loc.pos.x][loc.pos.y], nb_choices, 0)
     for (int i = 0; i < nb_choices; i++)
     {
         t_move deplacement = deplacements[i];
         t_localisation new_loc = translate(loc, deplacement);
-        new_deplacements = remove(deplacements, deplacement, nb_choices);
+
+        t_move* new_deplacements = remove2(deplacements, deplacement, nb_choices);
+
         if (costs[new_loc.pos.x][new_loc.pos.y] < 9999)
         {
-            son = createNode(65535, 30, depth + 1);
-            fill_node(son, son->depth, nb_choices - 1,costs, new_loc, new_deplacements);
+            t_node* son = createNode(DEFAULT_COST, DEFAULT_NB_SONS, depth + 1);
+            fill_node(son, son->depth, nb_choices - 1, costs, new_loc, new_deplacements);
+
+            node->sons[i] = son;
         }
 
-
+        free(new_deplacements);
     }
 }

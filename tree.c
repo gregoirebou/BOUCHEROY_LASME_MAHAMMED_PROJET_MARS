@@ -17,10 +17,4 @@ t_tree createEmptyNTree()
 void Fill_Tree(t_tree *tree, int height, int nb_choices, int** costs, t_localisation loc_init, t_move* deplacements)
 {
     fill_node(tree->root, height, nb_choices, costs, loc_init, deplacements);
-
-
-
-
-
-    return;
 }
