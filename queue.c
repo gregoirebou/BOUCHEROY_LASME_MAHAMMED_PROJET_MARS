@@ -39,3 +39,9 @@ t_position dequeue(t_queue *p_queue)
     p_queue->first++;
     return p_queue->values[(p_queue->first - 1) % p_queue->size];
 }
+
+t_queue_tab createEmptyQueue(){
+    t_queue_tab  q;
+    q.first  = q.last = 0;
+    return q;
+}
