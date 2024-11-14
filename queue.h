@@ -25,6 +25,7 @@ typedef struct s_queue_tab
 t_queue_tab createEmptyQueue();
 
 void enqueue_tab(t_queue_tab*, t_node*);
+int dequeue_tab(t_queue_tab);
 
 /**
  * @brief Function to create a queue
