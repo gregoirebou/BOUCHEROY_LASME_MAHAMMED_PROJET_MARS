@@ -16,6 +16,14 @@ typedef struct s_queue
     int first;
 } t_queue;
 
+typedef struct s_queue_tab
+{
+    t_node* values[100];
+    int first, last;
+}t_queue_tab;
+
+t_queue_tab createEmptyQueue();
+
 /**
  * @brief Function to create a queue
  * @param size : the size of the queue
