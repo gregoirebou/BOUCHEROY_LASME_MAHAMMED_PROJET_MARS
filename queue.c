@@ -39,3 +39,28 @@ t_position dequeue(t_queue *p_queue)
     p_queue->first++;
     return p_queue->values[(p_queue->first - 1) % p_queue->size];
 }
+
+t_queue_tab createEmptyQueue(){
+    t_queue_tab  q;
+    q.first  = q.last = 0;
+    return q;
+}
+
+int isQueueEmpty(t_queue_tab q){
+    return(q.last-q.first == 100); //100=MAX à modifier
+}
+
+void enqueue_tab(t_queue_tab* pq, t_node* noeud){
+    int pos;
+    pos = pq->last % 100;
+    pq->values[pos] = noeud;
+    pq->last = pq->last+1;
+
+}
+
+int dequeue_tab(t_queue_tab* pq){
+    int res;
+    int pos = pq->first%100;
+    res = pq->values[pos]->value;
+    pq->first = pq->first+1;
+}
