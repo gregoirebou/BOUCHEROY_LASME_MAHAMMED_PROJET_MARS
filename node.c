@@ -30,10 +30,14 @@ t_move* remove2(t_move* deplacements, t_move dep, int TL)
 {
     t_move* new = (t_move*)malloc(sizeof(t_move)*(TL - 1));
     int nb = 0;
+    int occurrence = 0;
     for (int i = 0; i < TL; i++)
     {
-        if (dep != deplacements[i])
+        if (dep == deplacements[i] && occurrence == 0)
         {
+            occurrence++;
+        }
+        else {
             new[nb++] = deplacements[i];
         }
     }
