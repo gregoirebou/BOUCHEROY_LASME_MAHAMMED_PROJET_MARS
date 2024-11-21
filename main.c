@@ -30,7 +30,7 @@ int main() {
     init.pos.x = map.x_max - 2;
     init.pos.y = map.y_max - 1;
     init.ori = NORTH;
-    Fill_Tree(treefor33, 3, 3, map.costs, init, depl);
+    Fill_Tree(&treefor33, 3, 3, map.costs, init, depl,map.y_max - 1, map.x_max );
     display_tree(treefor33);
     return 0;
 }
