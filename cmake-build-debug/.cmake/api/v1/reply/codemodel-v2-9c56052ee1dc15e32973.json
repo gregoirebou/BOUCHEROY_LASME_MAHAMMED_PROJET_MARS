@@ -1,0 +1,60 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"jsonFile" : "directory-.-Debug-d0094a50bb2071803777.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.27"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "BOUCHEROY_LASME_MAHAMMED_PROJET_MARS",
+					"targetIndexes" : 
+					[
+						0
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "BOUCHEROY_LASME_MAHAMMED_PROJET_MARS::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-BOUCHEROY_LASME_MAHAMMED_PROJET_MARS-Debug-48814226687dcb5bc456.json",
+					"name" : "BOUCHEROY_LASME_MAHAMMED_PROJET_MARS",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "C:/Users/grego/CLionProjects/BOUCHEROY_LASME_MAHAMMED_PROJET_MARSv2/cmake-build-debug",
+		"source" : "C:/Users/grego/CLionProjects/BOUCHEROY_LASME_MAHAMMED_PROJET_MARSv2"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 6
+	}
+}

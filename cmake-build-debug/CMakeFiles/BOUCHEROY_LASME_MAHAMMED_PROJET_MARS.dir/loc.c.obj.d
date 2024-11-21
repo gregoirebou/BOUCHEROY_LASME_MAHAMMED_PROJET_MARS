@@ -1,0 +1,3 @@
+CMakeFiles/BOUCHEROY_LASME_MAHAMMED_PROJET_MARS.dir/loc.c.obj: \
+ C:\Users\grego\CLionProjects\BOUCHEROY_LASME_MAHAMMED_PROJET_MARSv2\loc.c \
+ C:\Users\grego\CLionProjects\BOUCHEROY_LASME_MAHAMMED_PROJET_MARSv2\loc.h

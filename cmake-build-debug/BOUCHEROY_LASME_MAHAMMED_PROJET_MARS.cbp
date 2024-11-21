@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="BOUCHEROY_LASME_MAHAMMED_PROJET_MARS"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="C:/Users/grego/CLionProjects/BOUCHEROY_LASME_MAHAMMED_PROJET_MARSv2/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="C:/PROGRA~1/JETBRA~1/CLION2~1.2/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/grego/CLionProjects/BOUCHEROY_LASME_MAHAMMED_PROJET_MARSv2/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="C:/PROGRA~1/JETBRA~1/CLION2~1.2/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/grego/CLionProjects/BOUCHEROY_LASME_MAHAMMED_PROJET_MARSv2/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~1/JETBRA~1/CLION2~1.2/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/grego/CLionProjects/BOUCHEROY_LASME_MAHAMMED_PROJET_MARSv2/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~1/JETBRA~1/CLION2~1.2/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/grego/CLionProjects/BOUCHEROY_LASME_MAHAMMED_PROJET_MARSv2/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="BOUCHEROY_LASME_MAHAMMED_PROJET_MARS">
+				<Option output="C:/Users/grego/CLionProjects/BOUCHEROY_LASME_MAHAMMED_PROJET_MARSv2/cmake-build-debug/BOUCHEROY_LASME_MAHAMMED_PROJET_MARS.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/grego/CLionProjects/BOUCHEROY_LASME_MAHAMMED_PROJET_MARSv2/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="C:/Program Files/JetBrains/CLion 2023.3.2/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/include"/>
+					<Add directory="C:/Program Files/JetBrains/CLion 2023.3.2/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../include"/>
+					<Add directory="C:/Program Files/JetBrains/CLion 2023.3.2/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/include-fixed"/>
+					<Add directory="C:/Program Files/JetBrains/CLion 2023.3.2/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="C:/PROGRA~1/JETBRA~1/CLION2~1.2/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/grego/CLionProjects/BOUCHEROY_LASME_MAHAMMED_PROJET_MARSv2/cmake-build-debug/Makefile&quot;  VERBOSE=1 BOUCHEROY_LASME_MAHAMMED_PROJET_MARS"/>
+					<CompileFile command="C:/PROGRA~1/JETBRA~1/CLION2~1.2/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/grego/CLionProjects/BOUCHEROY_LASME_MAHAMMED_PROJET_MARSv2/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~1/JETBRA~1/CLION2~1.2/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/grego/CLionProjects/BOUCHEROY_LASME_MAHAMMED_PROJET_MARSv2/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~1/JETBRA~1/CLION2~1.2/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/grego/CLionProjects/BOUCHEROY_LASME_MAHAMMED_PROJET_MARSv2/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="BOUCHEROY_LASME_MAHAMMED_PROJET_MARS/fast">
+				<Option output="C:/Users/grego/CLionProjects/BOUCHEROY_LASME_MAHAMMED_PROJET_MARSv2/cmake-build-debug/BOUCHEROY_LASME_MAHAMMED_PROJET_MARS.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/grego/CLionProjects/BOUCHEROY_LASME_MAHAMMED_PROJET_MARSv2/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="C:/Program Files/JetBrains/CLion 2023.3.2/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/include"/>
+					<Add directory="C:/Program Files/JetBrains/CLion 2023.3.2/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../include"/>
+					<Add directory="C:/Program Files/JetBrains/CLion 2023.3.2/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/include-fixed"/>
+					<Add directory="C:/Program Files/JetBrains/CLion 2023.3.2/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="C:/PROGRA~1/JETBRA~1/CLION2~1.2/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/grego/CLionProjects/BOUCHEROY_LASME_MAHAMMED_PROJET_MARSv2/cmake-build-debug/Makefile&quot;  VERBOSE=1 BOUCHEROY_LASME_MAHAMMED_PROJET_MARS/fast"/>
+					<CompileFile command="C:/PROGRA~1/JETBRA~1/CLION2~1.2/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/grego/CLionProjects/BOUCHEROY_LASME_MAHAMMED_PROJET_MARSv2/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~1/JETBRA~1/CLION2~1.2/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/grego/CLionProjects/BOUCHEROY_LASME_MAHAMMED_PROJET_MARSv2/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~1/JETBRA~1/CLION2~1.2/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/grego/CLionProjects/BOUCHEROY_LASME_MAHAMMED_PROJET_MARSv2/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="C:/Users/grego/CLionProjects/BOUCHEROY_LASME_MAHAMMED_PROJET_MARSv2/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="C:/PROGRA~1/JETBRA~1/CLION2~1.2/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/grego/CLionProjects/BOUCHEROY_LASME_MAHAMMED_PROJET_MARSv2/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="C:/PROGRA~1/JETBRA~1/CLION2~1.2/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/grego/CLionProjects/BOUCHEROY_LASME_MAHAMMED_PROJET_MARSv2/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~1/JETBRA~1/CLION2~1.2/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/grego/CLionProjects/BOUCHEROY_LASME_MAHAMMED_PROJET_MARSv2/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~1/JETBRA~1/CLION2~1.2/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/grego/CLionProjects/BOUCHEROY_LASME_MAHAMMED_PROJET_MARSv2/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="C:/Users/grego/CLionProjects/BOUCHEROY_LASME_MAHAMMED_PROJET_MARSv2/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="C:/PROGRA~1/JETBRA~1/CLION2~1.2/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/grego/CLionProjects/BOUCHEROY_LASME_MAHAMMED_PROJET_MARSv2/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="C:/PROGRA~1/JETBRA~1/CLION2~1.2/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/grego/CLionProjects/BOUCHEROY_LASME_MAHAMMED_PROJET_MARSv2/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~1/JETBRA~1/CLION2~1.2/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/grego/CLionProjects/BOUCHEROY_LASME_MAHAMMED_PROJET_MARSv2/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~1/JETBRA~1/CLION2~1.2/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/grego/CLionProjects/BOUCHEROY_LASME_MAHAMMED_PROJET_MARSv2/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="C:/Users/grego/CLionProjects/BOUCHEROY_LASME_MAHAMMED_PROJET_MARSv2/loc.c">
+			<Option target="BOUCHEROY_LASME_MAHAMMED_PROJET_MARS"/>
+		</Unit>
+		<Unit filename="C:/Users/grego/CLionProjects/BOUCHEROY_LASME_MAHAMMED_PROJET_MARSv2/loc.h">
+			<Option target="BOUCHEROY_LASME_MAHAMMED_PROJET_MARS"/>
+		</Unit>
+		<Unit filename="C:/Users/grego/CLionProjects/BOUCHEROY_LASME_MAHAMMED_PROJET_MARSv2/main.c">
+			<Option target="BOUCHEROY_LASME_MAHAMMED_PROJET_MARS"/>
+		</Unit>
+		<Unit filename="C:/Users/grego/CLionProjects/BOUCHEROY_LASME_MAHAMMED_PROJET_MARSv2/map.c">
+			<Option target="BOUCHEROY_LASME_MAHAMMED_PROJET_MARS"/>
+		</Unit>
+		<Unit filename="C:/Users/grego/CLionProjects/BOUCHEROY_LASME_MAHAMMED_PROJET_MARSv2/map.h">
+			<Option target="BOUCHEROY_LASME_MAHAMMED_PROJET_MARS"/>
+		</Unit>
+		<Unit filename="C:/Users/grego/CLionProjects/BOUCHEROY_LASME_MAHAMMED_PROJET_MARSv2/moves.c">
+			<Option target="BOUCHEROY_LASME_MAHAMMED_PROJET_MARS"/>
+		</Unit>
+		<Unit filename="C:/Users/grego/CLionProjects/BOUCHEROY_LASME_MAHAMMED_PROJET_MARSv2/moves.h">
+			<Option target="BOUCHEROY_LASME_MAHAMMED_PROJET_MARS"/>
+		</Unit>
+		<Unit filename="C:/Users/grego/CLionProjects/BOUCHEROY_LASME_MAHAMMED_PROJET_MARSv2/node.c">
+			<Option target="BOUCHEROY_LASME_MAHAMMED_PROJET_MARS"/>
+		</Unit>
+		<Unit filename="C:/Users/grego/CLionProjects/BOUCHEROY_LASME_MAHAMMED_PROJET_MARSv2/node.h">
+			<Option target="BOUCHEROY_LASME_MAHAMMED_PROJET_MARS"/>
+		</Unit>
+		<Unit filename="C:/Users/grego/CLionProjects/BOUCHEROY_LASME_MAHAMMED_PROJET_MARSv2/queue.c">
+			<Option target="BOUCHEROY_LASME_MAHAMMED_PROJET_MARS"/>
+		</Unit>
+		<Unit filename="C:/Users/grego/CLionProjects/BOUCHEROY_LASME_MAHAMMED_PROJET_MARSv2/queue.h">
+			<Option target="BOUCHEROY_LASME_MAHAMMED_PROJET_MARS"/>
+		</Unit>
+		<Unit filename="C:/Users/grego/CLionProjects/BOUCHEROY_LASME_MAHAMMED_PROJET_MARSv2/stack.c">
+			<Option target="BOUCHEROY_LASME_MAHAMMED_PROJET_MARS"/>
+		</Unit>
+		<Unit filename="C:/Users/grego/CLionProjects/BOUCHEROY_LASME_MAHAMMED_PROJET_MARSv2/stack.h">
+			<Option target="BOUCHEROY_LASME_MAHAMMED_PROJET_MARS"/>
+		</Unit>
+		<Unit filename="C:/Users/grego/CLionProjects/BOUCHEROY_LASME_MAHAMMED_PROJET_MARSv2/tree.c">
+			<Option target="BOUCHEROY_LASME_MAHAMMED_PROJET_MARS"/>
+		</Unit>
+		<Unit filename="C:/Users/grego/CLionProjects/BOUCHEROY_LASME_MAHAMMED_PROJET_MARSv2/tree.h">
+			<Option target="BOUCHEROY_LASME_MAHAMMED_PROJET_MARS"/>
+		</Unit>
+		<Unit filename="C:/Users/grego/CLionProjects/BOUCHEROY_LASME_MAHAMMED_PROJET_MARSv2/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>

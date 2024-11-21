@@ -40,7 +40,7 @@ int main() {
     srand(time(NULL));
 
     t_move all_moves[] = {F_10, F_20, F_30, B_10, T_LEFT, T_RIGHT, U_TURN};
-    int n = sizeof(all_moves) / sizeof(all_moves[0]);
+    int n = 9;
     int k = 5;
 
     t_move *selected_moves = get_random_moves(all_moves, n, k);
