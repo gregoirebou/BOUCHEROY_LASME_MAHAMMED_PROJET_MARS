@@ -52,4 +52,6 @@ t_localisation move(t_localisation, t_move);
  */
 void updateLocalisation(t_localisation *, t_move);
 
+t_move *get_random_moves(t_move n_moves[], int n, int k);
+
 #endif //UNTITLED1_MOVES_H

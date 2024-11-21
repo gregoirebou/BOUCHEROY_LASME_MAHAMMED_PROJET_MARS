@@ -40,5 +40,5 @@ void display_tree(t_tree tree){
         }
         printf(" %d :",dequeue_tab(&file));
     }
-    printf("]");
+    printf("]\n");
 }

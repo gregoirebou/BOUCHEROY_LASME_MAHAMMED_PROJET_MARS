@@ -3,6 +3,8 @@
 //
 
 #include "moves.h"
+#include <stdlib.h>
+#include <stdio.h>
 
 /* prototypes of local functions */
 /* local functions are used only in this file, as helper functions */
@@ -152,4 +154,35 @@ void updateLocalisation(t_localisation *p_loc, t_move m)
 {
     *p_loc = move(*p_loc, m);
     return;
+}
+
+/**
+ * @brief Fonction pour générer un tableau de k mouvements aléatoires parmi n mouvements disponibles.
+ * @param n_moves : tableau des n mouvements possibles
+ * @param n : taille du tableau n_moves
+ * @param k : nombre de mouvements à sélectionner
+ * @return pointeur vers un tableau dynamique contenant k mouvements sélectionnés
+ */
+t_move* get_random_moves(t_move n_moves[], int n, int k) {
+    // Il faut que k et n soient > 0 et que k > n, sinon le calcul est impossible
+    if (k <= 0 || n <= 0 || k > n) {
+        fprintf(stderr, "Erreur : paramètres invalides (k=%d, n=%d).\n", k, n);
+        return NULL;
+    }
+
+    // Il faut allouer un tableau dynamique pour les mouvements sélectionnés
+    t_move *random_moves = malloc(k * sizeof(t_move));
+    // On vérifie que l'allocation n'a pas échoué
+    if (random_moves == NULL) {
+        fprintf(stderr, "Erreur d'allocation mémoire.\n");
+        exit(EXIT_FAILURE);
+    }
+
+    // On choisis aléatoirement les k mouvements
+    for (int i = 0; i < k; i++) {
+        int random_index = rand() % n; // Générer un index aléatoire dans [0, n-1]
+        random_moves[i] = n_moves[random_index];
+    }
+
+    return random_moves;
 }

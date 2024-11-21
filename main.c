@@ -1,4 +1,6 @@
 #include <stdio.h>
+#include <stdlib.h>
+#include "time.h"
 #include "map.h"
 #include "tree.h"
 
@@ -32,5 +34,23 @@ int main() {
     init.ori = NORTH;
     Fill_Tree(&treefor33, 3, 3, map.costs, init, depl,map.y_max - 1, map.x_max );
     display_tree(treefor33);
+
+    // Exemple d'utilisation de la fonction get_random_moves()
+
+    srand(time(NULL));
+
+    t_move all_moves[] = {F_10, F_20, F_30, B_10, T_LEFT, T_RIGHT, U_TURN};
+    int n = sizeof(all_moves) / sizeof(all_moves[0]);
+    int k = 5;
+
+    t_move *selected_moves = get_random_moves(all_moves, n, k);
+
+    // Affichage
+    printf("Mouvements :\n");
+    for (int i = 0; i < k; i++) {
+        printf("%s\n", getMoveAsString(selected_moves[i]));
+    }
+
+    free(selected_moves);
     return 0;
 }
