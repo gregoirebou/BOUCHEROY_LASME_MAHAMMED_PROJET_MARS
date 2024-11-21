@@ -25,16 +25,20 @@ void Fill_Tree(t_tree* tree, int height, int nb_choices, int** costs, t_localisa
 void display_tree(t_tree tree){
     t_queue_tab file;
     file = createEmptyQueue();
+
     enqueue_tab(&file, tree.root);
     printf("[");
     while(isQueueEmpty(file) == 0 ){
+
         if ( file.values[file.first]->nbSons != 0){
             for (int i = 0; i < file.values[file.first]->nbSons; i++){
-                enqueue_tab(&file, file.values[file.first]->sons[i]);
+
+                if  ( NULL != file.values[file.first]->sons[i]) {
+                    enqueue_tab(&file, file.values[file.first]->sons[i]);
+                }
             }
         }
         printf(" %d :",dequeue_tab(&file));
     }
     printf("]");
 }
-
