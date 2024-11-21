@@ -16,10 +16,10 @@ t_tree createEmptyNTree()
 
 }
 
-void Fill_Tree(t_tree tree, int height, int nb_choices, int** costs, t_localisation loc_init, t_move* deplacements)
+void Fill_Tree(t_tree* tree, int height, int nb_choices, int** costs, t_localisation loc_init, t_move* deplacements, int longeur, int largeur )
 {
-    tree.root = createNode(costs[loc_init.pos.x][loc_init.pos.y], nb_choices, 0);
-    //fill_node(tree.root, height, nb_choices, costs, loc_init, deplacements);
+    tree->root = createNode(costs[loc_init.pos.y][loc_init.pos.x], nb_choices, 0);
+    fill_node(tree->root, height, nb_choices, costs, loc_init, deplacements,longeur, largeur);
 }
 
 void display_tree(t_tree tree){
