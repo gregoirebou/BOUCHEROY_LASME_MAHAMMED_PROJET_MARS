@@ -39,9 +39,35 @@ int main() {
 
     srand(time(NULL));
 
-    t_move all_moves[] = {F_10, F_20, F_30, B_10, T_LEFT, T_RIGHT, U_TURN};
-    int n = 9;
-    int k = 5;
+    t_move all_moves[] = {
+            // 22 occurrences de F_10
+            F_10, F_10, F_10, F_10, F_10, F_10, F_10, F_10, F_10, F_10,
+            F_10, F_10, F_10, F_10, F_10, F_10, F_10, F_10, F_10, F_10, F_10, F_10,
+
+            // 15 occurrences de F_20
+            F_20, F_20, F_20, F_20, F_20, F_20, F_20, F_20, F_20, F_20,
+            F_20, F_20, F_20, F_20, F_20,
+
+            // 7 occurrences de F_30
+            F_30, F_30, F_30, F_30, F_30, F_30, F_30,
+
+            // 7 occurrences de B_10
+            B_10, B_10, B_10, B_10, B_10, B_10, B_10,
+
+            // 21 occurrences de T_LEFT
+            T_LEFT, T_LEFT, T_LEFT, T_LEFT, T_LEFT, T_LEFT, T_LEFT, T_LEFT, T_LEFT, T_LEFT,
+            T_LEFT, T_LEFT, T_LEFT, T_LEFT, T_LEFT, T_LEFT, T_LEFT, T_LEFT, T_LEFT, T_LEFT, T_LEFT,
+
+            // 21 occurrences de T_RIGHT
+            T_RIGHT, T_RIGHT, T_RIGHT, T_RIGHT, T_RIGHT, T_RIGHT, T_RIGHT, T_RIGHT, T_RIGHT, T_RIGHT,
+            T_RIGHT, T_RIGHT, T_RIGHT, T_RIGHT, T_RIGHT, T_RIGHT, T_RIGHT, T_RIGHT, T_RIGHT, T_RIGHT, T_RIGHT,
+
+            // 7 occurrences de U_TURN
+            U_TURN, U_TURN, U_TURN, U_TURN, U_TURN, U_TURN, U_TURN
+    };
+
+    int n = 100;
+    int k = 9;
 
     t_move *selected_moves = get_random_moves(all_moves, n, k);
 
@@ -50,7 +76,7 @@ int main() {
     for (int i = 0; i < k; i++) {
         printf("%s\n", getMoveAsString(selected_moves[i]));
     }
-    selected_moves = remove_depl_from_tab(selected_moves, F_10, 5);
+    selected_moves = remove_depl_from_tab(selected_moves, F_10, k);
     printf("After removing F_10 :\n");
     for (int i = 0; i < k - 1; i++) {
         printf("%s\n", getMoveAsString(selected_moves[i]));

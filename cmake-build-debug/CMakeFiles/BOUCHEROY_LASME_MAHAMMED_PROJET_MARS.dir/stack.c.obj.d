@@ -17,4 +17,6 @@ CMakeFiles/BOUCHEROY_LASME_MAHAMMED_PROJET_MARS.dir/stack.c.obj: \
  C:/Program\ Files/JetBrains/CLion\ 2023.3.2/bin/mingw/x86_64-w64-mingw32/include/sec_api/stdlib_s.h \
  C:/Program\ Files/JetBrains/CLion\ 2023.3.2/bin/mingw/x86_64-w64-mingw32/include/errno.h \
  C:/Program\ Files/JetBrains/CLion\ 2023.3.2/bin/mingw/x86_64-w64-mingw32/include/assert.h \
- C:\Users\grego\CLionProjects\BOUCHEROY_LASME_MAHAMMED_PROJET_MARSv2\stack.h
+ C:\Users\grego\CLionProjects\BOUCHEROY_LASME_MAHAMMED_PROJET_MARSv2\stack.h \
+ C:\Users\grego\CLionProjects\BOUCHEROY_LASME_MAHAMMED_PROJET_MARSv2\moves.h \
+ C:\Users\grego\CLionProjects\BOUCHEROY_LASME_MAHAMMED_PROJET_MARSv2\loc.h

@@ -3,6 +3,7 @@
 //
 
 #include "moves.h"
+#include "node.h"
 #include <stdlib.h>
 #include <stdio.h>
 
@@ -182,6 +183,7 @@ t_move* get_random_moves(t_move n_moves[], int n, int k) {
     for (int i = 0; i < k; i++) {
         int random_index = rand() % n; // Générer un index aléatoire dans [0, n-1]
         random_moves[i] = n_moves[random_index];
+        n_moves = remove_depl_from_tab(n_moves,random_moves[i] , n--);
     }
 
     return random_moves;

@@ -95,6 +95,7 @@ CMakeFiles/BOUCHEROY_LASME_MAHAMMED_PROJET_MARS.dir/moves.c.obj
  C:/Program Files/JetBrains/CLion 2023.3.2/bin/mingw/x86_64-w64-mingw32/include/vadefs.h
  C:/Users/grego/CLionProjects/BOUCHEROY_LASME_MAHAMMED_PROJET_MARSv2/loc.h
  C:/Users/grego/CLionProjects/BOUCHEROY_LASME_MAHAMMED_PROJET_MARSv2/moves.h
+ C:/Users/grego/CLionProjects/BOUCHEROY_LASME_MAHAMMED_PROJET_MARSv2/node.h
 
 CMakeFiles/BOUCHEROY_LASME_MAHAMMED_PROJET_MARS.dir/node.c.obj
  C:/Users/grego/CLionProjects/BOUCHEROY_LASME_MAHAMMED_PROJET_MARSv2/node.c
@@ -123,6 +124,7 @@ CMakeFiles/BOUCHEROY_LASME_MAHAMMED_PROJET_MARS.dir/node.c.obj
  C:/Users/grego/CLionProjects/BOUCHEROY_LASME_MAHAMMED_PROJET_MARSv2/loc.h
  C:/Users/grego/CLionProjects/BOUCHEROY_LASME_MAHAMMED_PROJET_MARSv2/moves.h
  C:/Users/grego/CLionProjects/BOUCHEROY_LASME_MAHAMMED_PROJET_MARSv2/node.h
+ C:/Users/grego/CLionProjects/BOUCHEROY_LASME_MAHAMMED_PROJET_MARSv2/stack.h
 
 CMakeFiles/BOUCHEROY_LASME_MAHAMMED_PROJET_MARS.dir/queue.c.obj
  C:/Users/grego/CLionProjects/BOUCHEROY_LASME_MAHAMMED_PROJET_MARSv2/queue.c
@@ -167,6 +169,8 @@ CMakeFiles/BOUCHEROY_LASME_MAHAMMED_PROJET_MARS.dir/stack.c.obj
  C:/Program Files/JetBrains/CLion 2023.3.2/bin/mingw/x86_64-w64-mingw32/include/sec_api/stdlib_s.h
  C:/Program Files/JetBrains/CLion 2023.3.2/bin/mingw/x86_64-w64-mingw32/include/stdlib.h
  C:/Program Files/JetBrains/CLion 2023.3.2/bin/mingw/x86_64-w64-mingw32/include/vadefs.h
+ C:/Users/grego/CLionProjects/BOUCHEROY_LASME_MAHAMMED_PROJET_MARSv2/loc.h
+ C:/Users/grego/CLionProjects/BOUCHEROY_LASME_MAHAMMED_PROJET_MARSv2/moves.h
  C:/Users/grego/CLionProjects/BOUCHEROY_LASME_MAHAMMED_PROJET_MARSv2/stack.h
 
 CMakeFiles/BOUCHEROY_LASME_MAHAMMED_PROJET_MARS.dir/tree.c.obj

@@ -30,9 +30,12 @@ t_node *createNode(int val, int nb_sons, int depth)
 t_move* remove_depl_from_tab(t_move* deplacements, t_move dep, int TL)
 {
     // Création de la pile pour stocker les mouvements restants
-    if (TL == 1)
-    {
-        return NULL;
+    if (TL == 1) {
+        if (deplacements[0] == dep) {
+            free(deplacements);
+            return NULL;
+        }
+        return deplacements;
     }
     t_stack_depl deplstack = createStackDepl(TL - 1);
     int removed = 0; // Indicateur pour vérifier si 'dep' a déjà été supprimé
@@ -49,12 +52,8 @@ t_move* remove_depl_from_tab(t_move* deplacements, t_move dep, int TL)
         // Ajoute à la pile les autres mouvements
         pushDepl(&deplstack, deplacements[i]);
     }
-
-    // Vérification de la taille finale de la pile
-    if (deplstack.nbElts != TL - 1)
-    {
-        fprintf(stderr, "Erreur : taille de la pile incorrecte (%d au lieu de %d).\n", deplstack.nbElts, TL - 1);
-    }
+    if (!removed)
+        return deplacements;
 
     // Création du nouveau tableau contenant les mouvements restants
     t_move* new = (t_move*)malloc(sizeof(t_move) * (TL - 1));
