@@ -22,6 +22,17 @@ t_stack createStack(int size)
     return stack;
 }
 
+t_stack_depl createStackDepl(int size)
+{
+    // the size of the stack must be positive
+    assert(size > 0);
+    t_stack_depl stack;
+    stack.size = size;
+    stack.nbElts = 0;
+    stack.values = (t_move *)malloc(size * sizeof(t_move));
+    return stack;
+}
+
 /**
  * @brief Function to push a value in the stack
  * @param stack : the stack
@@ -37,12 +48,29 @@ void push(t_stack *p_stack, int value)
     return;
 }
 
+void pushDepl(t_stack_depl *p_stack, t_move move)
+{
+    // the stack must not be full
+    assert(p_stack->nbElts < p_stack->size);
+    p_stack->values[p_stack->nbElts] = move;
+    p_stack->nbElts++;
+    return;
+}
+
 /**
  * @brief Function to pop a value from the stack
  * @param stack : the stack
  * @return the value popped
  */
 int pop(t_stack *p_stack)
+{
+    // the stack must not be empty
+    assert(p_stack->nbElts > 0);
+    p_stack->nbElts--;
+    return p_stack->values[p_stack->nbElts];
+}
+
+t_move popDepl(t_stack_depl *p_stack)
 {
     // the stack must not be empty
     assert(p_stack->nbElts > 0);

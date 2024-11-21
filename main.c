@@ -50,7 +50,11 @@ int main() {
     for (int i = 0; i < k; i++) {
         printf("%s\n", getMoveAsString(selected_moves[i]));
     }
-
+    selected_moves = remove_depl_from_tab(selected_moves, F_10, 5);
+    printf("After removing F_10 :\n");
+    for (int i = 0; i < k - 1; i++) {
+        printf("%s\n", getMoveAsString(selected_moves[i]));
+    }
     free(selected_moves);
     return 0;
 }

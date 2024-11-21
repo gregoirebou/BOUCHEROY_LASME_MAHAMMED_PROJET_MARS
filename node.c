@@ -7,6 +7,7 @@
 #include "node.h"
 #include "loc.h"
 #include "moves.h"
+#include "stack.h"
 #define DEFAULT_COST 65535
 #define DEFAULT_NB_SONS 30
 
@@ -26,23 +27,48 @@ t_node *createNode(int val, int nb_sons, int depth)
     return new_node;
 }
 
-t_move* remove2(t_move* deplacements, t_move dep, int TL)
+t_move* remove_depl_from_tab(t_move* deplacements, t_move dep, int TL)
 {
-    t_move* new = (t_move*)malloc(sizeof(t_move)*(TL - 1));
-    int nb = 0;
-    int occurrence = 0;
+    // Création de la pile pour stocker les mouvements restants
+    if (TL == 1)
+    {
+        return NULL;
+    }
+    t_stack_depl deplstack = createStackDepl(TL - 1);
+    int removed = 0; // Indicateur pour vérifier si 'dep' a déjà été supprimé
+
+    // Parcours du tableau
     for (int i = 0; i < TL; i++)
     {
-        if (dep == deplacements[i] && occurrence == 0)
+        if (deplacements[i] == dep && !removed)
         {
-            occurrence++;
+            // Ignore cette occurrence de 'dep' une seule fois
+            removed = 1;
+            continue;
         }
-        else {
-            new[nb++] = deplacements[i];
-        }
+        // Ajoute à la pile les autres mouvements
+        pushDepl(&deplstack, deplacements[i]);
     }
+
+    // Vérification de la taille finale de la pile
+    if (deplstack.nbElts != TL - 1)
+    {
+        fprintf(stderr, "Erreur : taille de la pile incorrecte (%d au lieu de %d).\n", deplstack.nbElts, TL - 1);
+    }
+
+    // Création du nouveau tableau contenant les mouvements restants
+    t_move* new = (t_move*)malloc(sizeof(t_move) * (TL - 1));
+
+    // Dépiler les éléments et les ajouter au tableau
+    for (int j = TL - 2; j >= 0; j--)
+    {
+        new[j] = popDepl(&deplstack);
+    }
+
     return new;
 }
+
+
 
 
 void fill_node(t_node* node, int depth, int nb_choices, int** costs, t_localisation loc, t_move* deplacements, int longeur, int largeur )
@@ -57,7 +83,7 @@ void fill_node(t_node* node, int depth, int nb_choices, int** costs, t_localisat
         t_localisation new_loc = translate(loc, deplacement);
 
         if (new_loc.pos.x >= 0 && new_loc.pos.x <= largeur - 1 && new_loc.pos.y >= 0 && new_loc.pos.y <= longeur - 1) {
-            t_move* new_deplacements = remove2(deplacements, deplacement, nb_choices);
+            t_move* new_deplacements = remove_depl_from_tab(deplacements, deplacement, nb_choices);
 
             if (costs[new_loc.pos.y][new_loc.pos.x] < 9999)
             {
