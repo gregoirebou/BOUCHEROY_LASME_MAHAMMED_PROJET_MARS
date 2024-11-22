@@ -54,4 +54,6 @@ void updateLocalisation(t_localisation *, t_move);
 
 t_move *get_random_moves(t_move n_moves[], int n, int k);
 
+t_move determine_best_move(t_map map, t_localisation loc, t_move* moves, int num_moves);
+
 #endif //UNTITLED1_MOVES_H
