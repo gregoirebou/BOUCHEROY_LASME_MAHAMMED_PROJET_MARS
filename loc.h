@@ -80,4 +80,6 @@ t_position UP(t_position);
  */
 t_position DOWN(t_position);
 
+t_localisation simulate_move(t_localisation loc, t_move move);
+
 #endif //UNTITLED1_LOC_H
