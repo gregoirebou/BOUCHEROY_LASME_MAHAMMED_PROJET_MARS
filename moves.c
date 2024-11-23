@@ -188,23 +188,3 @@ t_move* get_random_moves(t_move n_moves[], int n, int k) {
 
     return random_moves;
 }
-
-t_move determine_best_move(t_map map, t_localisation loc, t_move* moves, int num_moves) {
-    int min_cost = INT_MAX;
-    t_move best_move = moves[0];
-
-    for (int i = 0; i < num_moves; i++) {
-        t_localisation new_loc = simulate_move(loc, moves[i]);
-        if (new_loc.pos.x >= 0 && new_loc.pos.x < map.x_max && new_loc.pos.y >= 0 && new_loc.pos.y < map.y_max) {
-            if (new_loc.pos.x >= 0 && new_loc.pos.x < map.x_max &&
-                new_loc.pos.y >= 0 && new_loc.pos.y < map.y_max) {
-                int cost = map.costs[new_loc.pos.y][new_loc.pos.x];
-                if (cost < min_cost) {
-                    min_cost = cost;
-                    best_move = moves[i];
-                }
-            }
-        }
-
-        return best_move;
-    }
