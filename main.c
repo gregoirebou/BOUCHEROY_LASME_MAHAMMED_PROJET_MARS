@@ -82,5 +82,45 @@ int main() {
         printf("%s\n", getMoveAsString(selected_moves[i]));
     }
     free(selected_moves);
+
+    // Initialisation de la position du robot
+    t_localisation loc;
+    loc.pos.x = 2;
+    loc.pos.y = 2;
+    loc.ori = NORTH;
+
+    // Initialisation des mouvements possibles
+    t_move moves[] = {F_10, F_20, F_30, B_10, T_LEFT, T_RIGHT, U_TURN};
+    int num_moves = sizeof(moves) / sizeof(moves[0]);
+
+
+    printf("Before determine_best_move\n");
+
+    // Appel de la fonction determine_best_move
+    t_move best_move = determine_best_move(map, loc, moves, num_moves);
+
+
+    printf("After determine_best_move\n");
+
+    // Affichage du meilleur mouvement
+    printf("Le meilleur mouvement est : %s\n", getMoveAsString(best_move));
+
+
+    printf("Before simulate_move\n");
+
+    // Simulation du mouvement
+    t_localisation new_loc = simulate_move(loc, best_move);
+
+
+    printf("After simulate_move\n");
+
+    // Affichage de la nouvelle position
+    printf("Nouvelle position : (%d, %d) orientation : %d\n", new_loc.pos.x, new_loc.pos.y, new_loc.ori);
+
+
+    for (int i = 0; i < map.y_max; i++) {
+        free(map.costs[i]);
+    }
+    free(map.costs);
     return 0;
 }
